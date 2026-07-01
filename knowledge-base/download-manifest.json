@@ -1,0 +1,254 @@
+[
+  {
+    "id": 59,
+    "author": "Descartes",
+    "title": "Discourse on Method and Meditations",
+    "dir": "descartes"
+  },
+  {
+    "id": 5740,
+    "author": "Wittgenstein",
+    "title": "Tractatus Logico-Philosophicus",
+    "dir": "wittgenstein"
+  },
+  {
+    "id": 1998,
+    "author": "Nietzsche",
+    "title": "Thus Spoke Zarathustra",
+    "dir": "nietzsche"
+  },
+  {
+    "id": 4363,
+    "author": "Nietzsche",
+    "title": "Beyond Good and Evil",
+    "dir": "nietzsche"
+  },
+  {
+    "id": 52219,
+    "author": "Nietzsche",
+    "title": "The Genealogy of Morals",
+    "dir": "nietzsche"
+  },
+  {
+    "id": 19322,
+    "author": "Nietzsche",
+    "title": "The Antichrist",
+    "dir": "nietzsche"
+  },
+  {
+    "id": 52263,
+    "author": "Nietzsche",
+    "title": "Twilight of the Idols",
+    "dir": "nietzsche"
+  },
+  {
+    "id": 52881,
+    "author": "Nietzsche",
+    "title": "The Joyful Wisdom",
+    "dir": "nietzsche"
+  },
+  {
+    "id": 50471,
+    "author": "Kierkegaard",
+    "title": "Fear and Trembling",
+    "dir": "kierkegaard"
+  },
+  {
+    "id": 56339,
+    "author": "Kierkegaard",
+    "title": "The Concept of Anxiety",
+    "dir": "kierkegaard"
+  },
+  {
+    "id": 37923,
+    "author": "Kierkegaard",
+    "title": "Either/Or Vol 1",
+    "dir": "kierkegaard"
+  },
+  {
+    "id": 37942,
+    "author": "Kierkegaard",
+    "title": "Either/Or Vol 2",
+    "dir": "kierkegaard"
+  },
+  {
+    "id": 53309,
+    "author": "Kierkegaard",
+    "title": "The Sickness Unto Death",
+    "dir": "kierkegaard"
+  },
+  {
+    "id": 1497,
+    "author": "Plato",
+    "title": "Republic",
+    "dir": "reference-index"
+  },
+  {
+    "id": 1572,
+    "author": "Plato",
+    "title": "Phaedo",
+    "dir": "reference-index"
+  },
+  {
+    "id": 1600,
+    "author": "Plato",
+    "title": "Symposium",
+    "dir": "reference-index"
+  },
+  {
+    "id": 1656,
+    "author": "Plato",
+    "title": "Apology",
+    "dir": "reference-index"
+  },
+  {
+    "id": 8438,
+    "author": "Aristotle",
+    "title": "Nicomachean Ethics",
+    "dir": "reference-index"
+  },
+  {
+    "id": 6762,
+    "author": "Aristotle",
+    "title": "Politics",
+    "dir": "reference-index"
+  },
+  {
+    "id": 1974,
+    "author": "Aristotle",
+    "title": "Poetics",
+    "dir": "reference-index"
+  },
+  {
+    "id": 5116,
+    "author": "James",
+    "title": "Pragmatism",
+    "dir": "pragmatism"
+  },
+  {
+    "id": 6211,
+    "author": "James",
+    "title": "Varieties of Religious Experience",
+    "dir": "pragmatism"
+  },
+  {
+    "id": 52879,
+    "author": "James",
+    "title": "The Will to Believe",
+    "dir": "pragmatism"
+  },
+  {
+    "id": 4280,
+    "author": "Kant",
+    "title": "Critique of Pure Reason",
+    "dir": "reference-index"
+  },
+  {
+    "id": 36844,
+    "author": "Kant",
+    "title": "Groundwork of Metaphysics of Morals",
+    "dir": "reference-index"
+  },
+  {
+    "id": 4705,
+    "author": "Hume",
+    "title": "Enquiry Concerning Human Understanding",
+    "dir": "reference-index"
+  },
+  {
+    "id": 4706,
+    "author": "Hume",
+    "title": "Dialogues on Natural Religion",
+    "dir": "reference-index"
+  },
+  {
+    "id": 3800,
+    "author": "Spinoza",
+    "title": "Ethics",
+    "dir": "reference-index"
+  },
+  {
+    "id": 44946,
+    "author": "Hegel",
+    "title": "Philosophy of History",
+    "dir": "reference-index"
+  },
+  {
+    "id": 4085,
+    "author": "Schopenhauer",
+    "title": "Studies in Pessimism",
+    "dir": "reference-index"
+  },
+  {
+    "id": 10715,
+    "author": "Schopenhauer",
+    "title": "World as Will and Idea Vol 1",
+    "dir": "reference-index"
+  },
+  {
+    "id": 46333,
+    "author": "Rousseau",
+    "title": "The Social Contract",
+    "dir": "reference-index"
+  },
+  {
+    "id": 3913,
+    "author": "Rousseau",
+    "title": "Confessions",
+    "dir": "reference-index"
+  },
+  {
+    "id": 36298,
+    "author": "Rousseau",
+    "title": "Emile",
+    "dir": "reference-index"
+  },
+  {
+    "id": 35688,
+    "author": "Rousseau",
+    "title": "Discourse on Inequality",
+    "dir": "reference-index"
+  },
+  {
+    "id": 61,
+    "author": "Marx",
+    "title": "Communist Manifesto",
+    "dir": "reference-index"
+  },
+  {
+    "id": 1124,
+    "author": "Mill",
+    "title": "Utilitarianism",
+    "dir": "reference-index"
+  },
+  {
+    "id": 34901,
+    "author": "Mill",
+    "title": "On Liberty",
+    "dir": "reference-index"
+  },
+  {
+    "id": 4724,
+    "author": "Berkeley",
+    "title": "Three Dialogues",
+    "dir": "reference-index"
+  },
+  {
+    "id": 2680,
+    "author": "Marcus Aurelius",
+    "title": "Meditations",
+    "dir": "reference-index"
+  },
+  {
+    "id": 45109,
+    "author": "Epictetus",
+    "title": "Enchiridion",
+    "dir": "reference-index"
+  },
+  {
+    "id": 3296,
+    "author": "Augustine",
+    "title": "Confessions",
+    "dir": "reference-index"
+  }
+]

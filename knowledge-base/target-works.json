@@ -1,0 +1,171 @@
+[
+  {
+    "author": "Descartes",
+    "works": [
+      "Meditations on First Philosophy",
+      "Discourse on Method",
+      "Principles of Philosophy"
+    ]
+  },
+  {
+    "author": "Kierkegaard",
+    "works": [
+      "Fear and Trembling",
+      "Either/Or",
+      "Sickness Unto Death",
+      "Concept of Anxiety"
+    ]
+  },
+  {
+    "author": "Nietzsche",
+    "works": [
+      "Thus Spoke Zarathustra",
+      "Beyond Good and Evil",
+      "Genealogy of Morals",
+      "Antichrist",
+      "Twilight of the Idols",
+      "The Joyful Wisdom"
+    ]
+  },
+  {
+    "author": "William James",
+    "works": [
+      "Pragmatism",
+      "Varieties of Religious Experience",
+      "Principles of Psychology",
+      "Will to Believe"
+    ]
+  },
+  {
+    "author": "Wittgenstein",
+    "works": [
+      "Tractatus Logico-Philosophicus"
+    ]
+  },
+  {
+    "author": "Hegel",
+    "works": [
+      "Phenomenology of Spirit",
+      "Science of Logic",
+      "Philosophy of History"
+    ]
+  },
+  {
+    "author": "Kant",
+    "works": [
+      "Critique of Pure Reason",
+      "Critique of Practical Reason",
+      "Groundwork of Metaphysics of Morals"
+    ]
+  },
+  {
+    "author": "David Hume",
+    "works": [
+      "Treatise of Human Nature",
+      "Enquiry Concerning Human Understanding",
+      "Dialogues Concerning Natural Religion"
+    ]
+  },
+  {
+    "author": "Spinoza",
+    "works": [
+      "Ethics",
+      "Theologico-Political Treatise"
+    ]
+  },
+  {
+    "author": "Plato",
+    "works": [
+      "Republic",
+      "Phaedo",
+      "Symposium",
+      "Apology"
+    ]
+  },
+  {
+    "author": "Aristotle",
+    "works": [
+      "Nicomachean Ethics",
+      "Metaphysics",
+      "Poetics",
+      "Politics"
+    ]
+  },
+  {
+    "author": "Schopenhauer",
+    "works": [
+      "World as Will and Representation",
+      "Essays"
+    ]
+  },
+  {
+    "author": "Rousseau",
+    "works": [
+      "Social Contract",
+      "Confessions",
+      "Emile",
+      "Discourse on Inequality"
+    ]
+  },
+  {
+    "author": "Marx",
+    "works": [
+      "Capital",
+      "Communist Manifesto",
+      "Economic and Philosophic Manuscripts"
+    ]
+  },
+  {
+    "author": "Saussure",
+    "works": [
+      "Course in General Linguistics"
+    ]
+  },
+  {
+    "author": "Peirce",
+    "works": [
+      "How to Make Our Ideas Clear",
+      "Fixation of Belief"
+    ]
+  },
+  {
+    "author": "Mill",
+    "works": [
+      "Utilitarianism",
+      "On Liberty"
+    ]
+  },
+  {
+    "author": "Berkeley",
+    "works": [
+      "Principles of Human Knowledge",
+      "Three Dialogues"
+    ]
+  },
+  {
+    "author": "Marcus Aurelius",
+    "works": [
+      "Meditations"
+    ]
+  },
+  {
+    "author": "Epictetus",
+    "works": [
+      "Discourses",
+      "Enchiridion"
+    ]
+  },
+  {
+    "author": "Augustine",
+    "works": [
+      "Confessions",
+      "City of God"
+    ]
+  },
+  {
+    "author": "Thomas Aquinas",
+    "works": [
+      "Summa Theologica"
+    ]
+  }
+]
