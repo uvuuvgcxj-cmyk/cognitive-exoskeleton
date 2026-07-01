@@ -32,6 +32,9 @@ var C={key:"sk-889ceecb9fd2479dbdd3a26380b31495",model:"deepseek-v4-flash",url:"
 var SP="你是一个\"认知外骨骼系统（Cognitive Exoskeleton System）\"。\n\n你的唯一目标是：在保持用户思维清晰、自洽、低内耗的前提下，提升其现实行动质量。\n\n你不是聊天AI，你是一个\"认知建模 + 推理 + 行动约束系统\"。\n\n一、核心设计原则\n1. 现实优先原则：所有输出必须最终服务于现实行动或现实理解。禁止纯抽象思考、哲学替代行动、无限解释循环。\n2. 哲学受控原则：哲学只能作为\"解释层\"，不能作为\"决策权威\"。哲学用途：解释认知结构、识别思维偏差、提供多视角理解。禁止用哲学替代决策。\n3. 结构稳定原则：所有输出必须保持一致结构。\n\n二、标准输出格式（强制）\n每次输出必须包含：\nFACTS:\n- 客观发生的事情（不解释）\n\nPATTERNS:\n- 用户重复的认知/行为模式（必须有重复证据）\n\nPHILOSOPHICAL ANALYSIS:\n- 使用哲学工具解释当前问题结构（必须标明哲学视角）\n\nRISKS:\n- 当前思维/行为可能导致的问题（内耗、拖延等）\n\nPRACTICAL NEXT STEP:\n- 唯一明确的下一步行动（必须具体、可执行）\n\n三、Pattern识别规则\n只有在满足以下条件时才能记录Pattern：至少出现2次以上类似行为，或跨场景重复出现，或具有稳定倾向。Pattern必须格式化为：\"当X发生时，用户倾向于Y\"。禁止单次推断、模糊描述。\n\n四、哲学工具系统（受控使用）\n只能用于分析，不得用于决策替代。\n可用哲学工具：\n🟢 解释类：现象学、系统论、结构主义\n🟡 决策辅助类：实用主义、存在主义\n🔵 认知纠偏类：维特根斯坦（语言误导）、笛卡尔怀疑（过度确定性）、海德格尔（逃避现实）\n\n五、行动约束机制\n每次输出必须包含一个\"现实动作\"。动作必须满足：具体、可执行、时间/行为明确、不能是\"思考类动作\"。正确示例：\"现在做5道物理选择题\"、\"整理今天错题3条\"。错误示例：\"继续思考\"、\"理解一下\"。\n\n六、认知状态识别\n🟢 行动状态：正在执行任务\n🟡 内省状态：反复思考、行动减少\n🔴 认知循环状态：重复同一主题、无行动推进\n当检测到🔴时：必须输出\"SYSTEM NOTICE: cognitive loop detected\"并强制行动建议。\n\n七、输出语言\n请根据用户输入的语言（中文/英文）来输出相应语言。";
 var hist=[{role:"system",content:SP}];
 var msgCt=0,curSt="idle",pats=[],acts=[],risks=[],phils=[],tl=[],proc=false;
+var saveState=function(){try{localStorage.setItem("ces",JSON.stringify({hist:hist,msgCt:msgCt,curSt:curSt,pats:pats,acts:acts,risks:risks,phils:phils,tl:tl}))}catch(e){}};
+var loadState=function(){try{var d=JSON.parse(localStorage.getItem("ces"));if(d&&d.hist&&d.hist.length>1){hist=d.hist;msgCt=d.msgCt||0;curSt=d.curSt||"idle";pats=d.pats||[];acts=d.acts||[];risks=d.risks||[];phils=d.phils||[];tl=d.tl||[];return true}}catch(e){}return false};
+
 var $=function(id){return document.getElementById(id)};
 var chatMsg=$("chatMessages"),inp=$("chatInput"),snd=$("sendBtn");
 var sc=$("stateCard"),sd=$("stateDot"),sv=$("stateValue");
@@ -54,9 +57,36 @@ var renderMsg=function(role,text,parsed){var div=document.createElement("div");d
 var addThink=function(){var d=document.createElement("div");d.className="msg s";d.id="ti";d.innerHTML='<div class="thk"><div class="thk-dt"><span></span><span></span><span></span></div><span style="font-size:12px;color:var(--t3)">认知分析中...</span></div>';chatMsg.appendChild(d);chatMsg.scrollTop=chatMsg.scrollHeight};
 var rmThink=function(){var e=$("ti");if(e)e.remove()};
 var handleKeydown=function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();sendMessage()}};
-var sendMessage=async function(){var text=inp.value.trim();if(!text||proc)return;renderMsg("user",text,null);hist.push({role:"user",content:text});inp.value="";inp.style.height="auto";$("wordCount").textContent="0";addThink();proc=true;snd.disabled=true;try{var resp=await fetch(C.url,{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+C.key},body:JSON.stringify({model:C.model,messages:hist,temperature:0.7,max_tokens:2000})});if(!resp.ok)throw new Error("API Error "+resp.status+": "+await resp.text());var data=await resp.json();var reply=data.choices[0].message.content;var parsed=parseR(reply);var state=detSt(text,parsed);curSt=state;updateState(state);addTL(state,text.substring(0,50)+(text.length>50?"...":""));updSidebar(parsed);rmThink();renderMsg("system",reply,parsed);hist.push({role:"assistant",content:reply});msgCt++}catch(err){rmThink();var ed=document.createElement("div");ed.className="msg s";ed.innerHTML='<div class="bb" style="border-color:var(--rd)"><div style="color:var(--rd);font-weight:600;font-size:12px;margin-bottom:4px;">\u274c 连接错误</div><div style="font-size:12px;color:var(--t2);">'+esc(err.message)+'</div><div style="font-size:11px;color:var(--t3);margin-top:6px;">提示：请确认 API Key 和模型名称配置正确，以及网络连接正常。</div></div>';chatMsg.appendChild(ed);chatMsg.scrollTop=chatMsg.scrollHeight}finally{proc=false;snd.disabled=false;inp.focus()}};
-var resetChat=function(){if(!confirm("确定要重置对话吗？所有历史记录将被清除。"))return;hist=[{role:"system",content:SP}];msgCt=0;curSt="idle";pats=[];acts=[];risks=[];phils=[];tl=[];chatMsg.innerHTML='<div class="msg s"><div class="bb"><div style="font-size:12px;color:var(--t3);margin-bottom:6px;">\u26a1 系统已重置</div><div style="font-size:13px;color:var(--t2);line-height:1.6;">对话已重置。请告诉我你当前的状态、遇到的问题，或者任何你想梳理的思维。</div></div><div class="mt">'+new Date().toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})+'</div></div>';updateState("idle");renderTL();renderPats();renderPhils();renderActs();renderRisks()};
-updateState("idle");inp.focus();
+var sendMessage=async function(){var text=inp.value.trim();if(!text||proc)return;renderMsg("user",text,null);hist.push({role:"user",content:text});inp.value="";inp.style.height="auto";$("wordCount").textContent="0";addThink();proc=true;snd.disabled=true;try{var resp=await fetch(C.url,{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+C.key},body:JSON.stringify({model:C.model,messages:hist,temperature:0.7,max_tokens:2000})});if(!resp.ok)throw new Error("API Error "+resp.status+": "+await resp.text());var data=await resp.json();var reply=data.choices[0].message.content;var parsed=parseR(reply);var state=detSt(text,parsed);curSt=state;updateState(state);addTL(state,text.substring(0,50)+(text.length>50?"...":""));updSidebar(parsed);rmThink();renderMsg("system",reply,parsed);hist.push({role:"assistant",content:reply});msgCt++}catch(err){rmThink();var ed=document.createElement("div");ed.className="msg s";ed.innerHTML='<div class="bb" style="border-color:var(--rd)"><div style="color:var(--rd);font-weight:600;font-size:12px;margin-bottom:4px;">\u274c 连接错误</div><div style="font-size:12px;color:var(--t2);">'+esc(err.message)+'</div><div style="font-size:11px;color:var(--t3);margin-top:6px;">提示：请确认 API Key 和模型名称配置正确，以及网络连接正常。</div></div>';chatMsg.appendChild(ed);chatMsg.scrollTop=chatMsg.scrollHeight}saveState();finally{proc=false;snd.disabled=false;inp.focus()}};
+var resetChat=function(){localStorage.removeItem("ces");if(!confirm("确定要重置对话吗？所有历史记录将被清除。"))return;hist=[{role:"system",content:SP}];msgCt=0;curSt="idle";pats=[];acts=[];risks=[];phils=[];tl=[];chatMsg.innerHTML='<div class="msg s"><div class="bb"><div style="font-size:12px;color:var(--t3);margin-bottom:6px;">\u26a1 系统已重置</div><div style="font-size:13px;color:var(--t2);line-height:1.6;">对话已重置。请告诉我你当前的状态、遇到的问题，或者任何你想梳理的思维。</div></div><div class="mt">'+new Date().toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})+'</div></div>';updateState("idle");renderTL();renderPats();renderPhils();renderActs();renderRisks()};
+// Init: load saved state or show fresh
+if(loadState()){
+  if(curSt&&curSt!="idle")updateState(curSt);
+  renderTL();renderPats();renderPhils();renderActs();renderRisks();
+  // Replay messages from history
+  chatMsg.innerHTML="";
+  for(var _i=1;_i<hist.length;_i++){
+    var _m=hist[_i];
+    var _p=_m.role==="system"?parseR(_m.content):null;
+    var _d=document.createElement("div");
+    _d.className="msg "+(_m.role==="user"?"u":"s");
+    var _h='<div class="bb">';
+    if(_m.role==="system"&&_p){
+      if(_p.facts.length){_h+='<div class="mf"><div class="fl">📋 FACTS</div>';_p.facts.forEach(function(f){_h+='<div class="fi">'+esc(f)+'</div>'});_h+="</div>"}
+      if(_p.patterns.length){_h+='<div class="mp"><div class="pl">🧩 PATTERNS</div>';_p.patterns.forEach(function(p){_h+='<div class="pi">'+esc(p)+'</div>'});_h+="</div>"}
+      if(_p.philosophy){_h+='<div class="mh"><div class="hl">📖 PHILOSOPHICAL ANALYSIS</div><div class="ht">'+esc(_p.philosophy)+"</div></div>"}
+      if(_p.risks.length){_h+='<div class="mr"><div class="rl">⚠️ RISKS</div>';_p.risks.forEach(function(r){_h+='<div class="ri">'+esc(r)+'</div>'});_h+="</div>"}
+      if(_p.action){_h+='<div class="ma"><div class="al">🎯 PRACTICAL NEXT STEP</div><div class="at">'+esc(_p.action)+"</div></div>"}
+    }else{_h+=esc(_m.content)}
+    _h+="</div>";
+    _h+='<div class="mt">'+new Date().toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})+'</div>';
+    _d.innerHTML=_h;chatMsg.appendChild(_d);
+  }
+  chatMsg.scrollTop=chatMsg.scrollHeight;
+}else{
+  updateState("idle");
+}
+inp.focus();
 </script>
 </body>
 </html>
