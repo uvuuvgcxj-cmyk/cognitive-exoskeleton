@@ -1,0 +1,467 @@
+{
+  "name": "Cognitive Exoskeleton Knowledge Base",
+  "version": "1.0",
+  "total": 42,
+  "philosophers": {
+    "Descartes": [
+      "Discourse and Meditations"
+    ],
+    "Kierkegaard": [
+      "EitherOr1",
+      "EitherOr2",
+      "FearTrembling",
+      "SicknessDeath",
+      "Anxiety"
+    ],
+    "Nietzsche": [
+      "Antichrist",
+      "Zarathustra",
+      "BeyondGoodEvil",
+      "Genealogy",
+      "Twilight",
+      "JoyfulWisdom"
+    ],
+    "James": [
+      "Pragmatism",
+      "WillToBelieve",
+      "Varieties"
+    ],
+    "Schopenhauer": [
+      "WorldWill",
+      "Pessimism"
+    ],
+    "Mill": [
+      "Utilitarianism",
+      "OnLiberty"
+    ],
+    "Plato": [
+      "Republic",
+      "Phaedo",
+      "Symposium",
+      "Apology"
+    ],
+    "Aristotle": [
+      "Poetics",
+      "Politics",
+      "Ethics"
+    ],
+    "Aurelius": [
+      "Meditations"
+    ],
+    "Augustine": [
+      "Confessions"
+    ],
+    "Rousseau": [
+      "Inequality",
+      "Emile",
+      "Confessions",
+      "SocialContract"
+    ],
+    "Kant": [
+      "Groundwork",
+      "PureReason"
+    ],
+    "Spinoza": [
+      "Ethics"
+    ],
+    "Hegel": [
+      "History"
+    ],
+    "Epictetus": [
+      "Enchiridion"
+    ],
+    "Hume": [
+      "Enquiry",
+      "Dialogues"
+    ],
+    "Berkeley": [
+      "Dialogues"
+    ],
+    "Marx": [
+      "Manifesto"
+    ],
+    "Wittgenstein": [
+      "Tractatus"
+    ]
+  },
+  "works": [
+    {
+      "id": 59,
+      "author": "Descartes",
+      "title": "Discourse and Meditations",
+      "file": "pg59_Descartes_Discourse_and_Meditations.txt",
+      "directory": "descartes",
+      "sizeKB": 147,
+      "source": "https://www.gutenberg.org/ebooks/59"
+    },
+    {
+      "id": 37923,
+      "author": "Kierkegaard",
+      "title": "EitherOr1",
+      "file": "pg37923_Kierkegaard_EitherOr1.txt",
+      "directory": "kierkegaard",
+      "sizeKB": 82,
+      "source": "https://www.gutenberg.org/ebooks/37923"
+    },
+    {
+      "id": 37942,
+      "author": "Kierkegaard",
+      "title": "EitherOr2",
+      "file": "pg37942_Kierkegaard_EitherOr2.txt",
+      "directory": "kierkegaard",
+      "sizeKB": 458,
+      "source": "https://www.gutenberg.org/ebooks/37942"
+    },
+    {
+      "id": 50471,
+      "author": "Kierkegaard",
+      "title": "FearTrembling",
+      "file": "pg50471_Kierkegaard_FearTrembling.txt",
+      "directory": "kierkegaard",
+      "sizeKB": 253,
+      "source": "https://www.gutenberg.org/ebooks/50471"
+    },
+    {
+      "id": 53309,
+      "author": "Kierkegaard",
+      "title": "SicknessDeath",
+      "file": "pg53309_Kierkegaard_SicknessDeath.txt",
+      "directory": "kierkegaard",
+      "sizeKB": 360,
+      "source": "https://www.gutenberg.org/ebooks/53309"
+    },
+    {
+      "id": 56339,
+      "author": "Kierkegaard",
+      "title": "Anxiety",
+      "file": "pg56339_Kierkegaard_Anxiety.txt",
+      "directory": "kierkegaard",
+      "sizeKB": 672,
+      "source": "https://www.gutenberg.org/ebooks/56339"
+    },
+    {
+      "id": 19322,
+      "author": "Nietzsche",
+      "title": "Antichrist",
+      "file": "pg19322_Nietzsche_Antichrist.txt",
+      "directory": "nietzsche",
+      "sizeKB": 221,
+      "source": "https://www.gutenberg.org/ebooks/19322"
+    },
+    {
+      "id": 1998,
+      "author": "Nietzsche",
+      "title": "Zarathustra",
+      "file": "pg1998_Nietzsche_Zarathustra.txt",
+      "directory": "nietzsche",
+      "sizeKB": 667,
+      "source": "https://www.gutenberg.org/ebooks/1998"
+    },
+    {
+      "id": 4363,
+      "author": "Nietzsche",
+      "title": "BeyondGoodEvil",
+      "file": "pg4363_Nietzsche_BeyondGoodEvil.txt",
+      "directory": "nietzsche",
+      "sizeKB": 399,
+      "source": "https://www.gutenberg.org/ebooks/4363"
+    },
+    {
+      "id": 52219,
+      "author": "Nietzsche",
+      "title": "Genealogy",
+      "file": "pg52219_Nietzsche_Genealogy.txt",
+      "directory": "nietzsche",
+      "sizeKB": 38,
+      "source": "https://www.gutenberg.org/ebooks/52219"
+    },
+    {
+      "id": 52263,
+      "author": "Nietzsche",
+      "title": "Twilight",
+      "file": "pg52263_Nietzsche_Twilight.txt",
+      "directory": "nietzsche",
+      "sizeKB": 444,
+      "source": "https://www.gutenberg.org/ebooks/52263"
+    },
+    {
+      "id": 52881,
+      "author": "Nietzsche",
+      "title": "JoyfulWisdom",
+      "file": "pg52881_Nietzsche_JoyfulWisdom.txt",
+      "directory": "nietzsche",
+      "sizeKB": 553,
+      "source": "https://www.gutenberg.org/ebooks/52881"
+    },
+    {
+      "id": 5116,
+      "author": "James",
+      "title": "Pragmatism",
+      "file": "pg5116_James_Pragmatism.txt",
+      "directory": "pragmatism",
+      "sizeKB": 323,
+      "source": "https://www.gutenberg.org/ebooks/5116"
+    },
+    {
+      "id": 52879,
+      "author": "James",
+      "title": "WillToBelieve",
+      "file": "pg52879_James_WillToBelieve.txt",
+      "directory": "pragmatism",
+      "sizeKB": 652,
+      "source": "https://www.gutenberg.org/ebooks/52879"
+    },
+    {
+      "id": 6211,
+      "author": "James",
+      "title": "Varieties",
+      "file": "pg6211_James_Varieties.txt",
+      "directory": "pragmatism",
+      "sizeKB": 132,
+      "source": "https://www.gutenberg.org/ebooks/6211"
+    },
+    {
+      "id": 10715,
+      "author": "Schopenhauer",
+      "title": "WorldWill",
+      "file": "pg10715_Schopenhauer_WorldWill.txt",
+      "directory": "reference-index",
+      "sizeKB": 273,
+      "source": "https://www.gutenberg.org/ebooks/10715"
+    },
+    {
+      "id": 1124,
+      "author": "Mill",
+      "title": "Utilitarianism",
+      "file": "pg1124_Mill_Utilitarianism.txt",
+      "directory": "reference-index",
+      "sizeKB": 175,
+      "source": "https://www.gutenberg.org/ebooks/1124"
+    },
+    {
+      "id": 1497,
+      "author": "Plato",
+      "title": "Republic",
+      "file": "pg1497_Plato_Republic.txt",
+      "directory": "reference-index",
+      "sizeKB": 1215,
+      "source": "https://www.gutenberg.org/ebooks/1497"
+    },
+    {
+      "id": 1572,
+      "author": "Plato",
+      "title": "Phaedo",
+      "file": "pg1572_Plato_Phaedo.txt",
+      "directory": "reference-index",
+      "sizeKB": 465,
+      "source": "https://www.gutenberg.org/ebooks/1572"
+    },
+    {
+      "id": 1600,
+      "author": "Plato",
+      "title": "Symposium",
+      "file": "pg1600_Plato_Symposium.txt",
+      "directory": "reference-index",
+      "sizeKB": 196,
+      "source": "https://www.gutenberg.org/ebooks/1600"
+    },
+    {
+      "id": 1656,
+      "author": "Plato",
+      "title": "Apology",
+      "file": "pg1656_Plato_Apology.txt",
+      "directory": "reference-index",
+      "sizeKB": 105,
+      "source": "https://www.gutenberg.org/ebooks/1656"
+    },
+    {
+      "id": 1974,
+      "author": "Aristotle",
+      "title": "Poetics",
+      "file": "pg1974_Aristotle_Poetics.txt",
+      "directory": "reference-index",
+      "sizeKB": 106,
+      "source": "https://www.gutenberg.org/ebooks/1974"
+    },
+    {
+      "id": 2680,
+      "author": "Aurelius",
+      "title": "Meditations",
+      "file": "pg2680_Aurelius_Meditations.txt",
+      "directory": "reference-index",
+      "sizeKB": 415,
+      "source": "https://www.gutenberg.org/ebooks/2680"
+    },
+    {
+      "id": 3296,
+      "author": "Augustine",
+      "title": "Confessions",
+      "file": "pg3296_Augustine_Confessions.txt",
+      "directory": "reference-index",
+      "sizeKB": 617,
+      "source": "https://www.gutenberg.org/ebooks/3296"
+    },
+    {
+      "id": 34901,
+      "author": "Mill",
+      "title": "OnLiberty",
+      "file": "pg34901_Mill_OnLiberty.txt",
+      "directory": "reference-index",
+      "sizeKB": 323,
+      "source": "https://www.gutenberg.org/ebooks/34901"
+    },
+    {
+      "id": 35688,
+      "author": "Rousseau",
+      "title": "Inequality",
+      "file": "pg35688_Rousseau_Inequality.txt",
+      "directory": "reference-index",
+      "sizeKB": 107,
+      "source": "https://www.gutenberg.org/ebooks/35688"
+    },
+    {
+      "id": 36298,
+      "author": "Rousseau",
+      "title": "Emile",
+      "file": "pg36298_Rousseau_Emile.txt",
+      "directory": "reference-index",
+      "sizeKB": 1702,
+      "source": "https://www.gutenberg.org/ebooks/36298"
+    },
+    {
+      "id": 36844,
+      "author": "Kant",
+      "title": "Groundwork",
+      "file": "pg36844_Kant_Groundwork.txt",
+      "directory": "reference-index",
+      "sizeKB": 284,
+      "source": "https://www.gutenberg.org/ebooks/36844"
+    },
+    {
+      "id": 3800,
+      "author": "Spinoza",
+      "title": "Ethics",
+      "file": "pg3800_Spinoza_Ethics.txt",
+      "directory": "reference-index",
+      "sizeKB": 519,
+      "source": "https://www.gutenberg.org/ebooks/3800"
+    },
+    {
+      "id": 3913,
+      "author": "Rousseau",
+      "title": "Confessions",
+      "file": "pg3913_Rousseau_Confessions.txt",
+      "directory": "reference-index",
+      "sizeKB": 1552,
+      "source": "https://www.gutenberg.org/ebooks/3913"
+    },
+    {
+      "id": 4085,
+      "author": "Schopenhauer",
+      "title": "Pessimism",
+      "file": "pg4085_Schopenhauer_Pessimism.txt",
+      "directory": "reference-index",
+      "sizeKB": 1093,
+      "source": "https://www.gutenberg.org/ebooks/4085"
+    },
+    {
+      "id": 4280,
+      "author": "Kant",
+      "title": "PureReason",
+      "file": "pg4280_Kant_PureReason.txt",
+      "directory": "reference-index",
+      "sizeKB": 1284,
+      "source": "https://www.gutenberg.org/ebooks/4280"
+    },
+    {
+      "id": 44946,
+      "author": "Hegel",
+      "title": "History",
+      "file": "pg44946_Hegel_History.txt",
+      "directory": "reference-index",
+      "sizeKB": 187,
+      "source": "https://www.gutenberg.org/ebooks/44946"
+    },
+    {
+      "id": 45109,
+      "author": "Epictetus",
+      "title": "Enchiridion",
+      "file": "pg45109_Epictetus_Enchiridion.txt",
+      "directory": "reference-index",
+      "sizeKB": 90,
+      "source": "https://www.gutenberg.org/ebooks/45109"
+    },
+    {
+      "id": 46333,
+      "author": "Rousseau",
+      "title": "SocialContract",
+      "file": "pg46333_Rousseau_SocialContract.txt",
+      "directory": "reference-index",
+      "sizeKB": 693,
+      "source": "https://www.gutenberg.org/ebooks/46333"
+    },
+    {
+      "id": 4705,
+      "author": "Hume",
+      "title": "Enquiry",
+      "file": "pg4705_Hume_Enquiry.txt",
+      "directory": "reference-index",
+      "sizeKB": 1334,
+      "source": "https://www.gutenberg.org/ebooks/4705"
+    },
+    {
+      "id": 4706,
+      "author": "Hume",
+      "title": "Dialogues",
+      "file": "pg4706_Hume_Dialogues.txt",
+      "directory": "reference-index",
+      "sizeKB": 737,
+      "source": "https://www.gutenberg.org/ebooks/4706"
+    },
+    {
+      "id": 4724,
+      "author": "Berkeley",
+      "title": "Dialogues",
+      "file": "pg4724_Berkeley_Dialogues.txt",
+      "directory": "reference-index",
+      "sizeKB": 6,
+      "source": "https://www.gutenberg.org/ebooks/4724"
+    },
+    {
+      "id": 61,
+      "author": "Marx",
+      "title": "Manifesto",
+      "file": "pg61_Marx_Manifesto.txt",
+      "directory": "reference-index",
+      "sizeKB": 92,
+      "source": "https://www.gutenberg.org/ebooks/61"
+    },
+    {
+      "id": 6762,
+      "author": "Aristotle",
+      "title": "Politics",
+      "file": "pg6762_Aristotle_Politics.txt",
+      "directory": "reference-index",
+      "sizeKB": 6,
+      "source": "https://www.gutenberg.org/ebooks/6762"
+    },
+    {
+      "id": 8438,
+      "author": "Aristotle",
+      "title": "Ethics",
+      "file": "pg8438_Aristotle_Ethics.txt",
+      "directory": "reference-index",
+      "sizeKB": 656,
+      "source": "https://www.gutenberg.org/ebooks/8438"
+    },
+    {
+      "id": 5740,
+      "author": "Wittgenstein",
+      "title": "Tractatus",
+      "file": "pg5740_Wittgenstein_Tractatus.txt",
+      "directory": "wittgenstein",
+      "sizeKB": 6,
+      "source": "https://www.gutenberg.org/ebooks/5740"
+    }
+  ]
+}
