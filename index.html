@@ -13,11 +13,11 @@
 <div class="sb-hdr"><div class="logo"><div class="logo-ic">⚡</div><h1>Cognitive Exoskeleton</h1></div><div class="sub">隐式内核 · 可控外显</div></div>
 <div class="sb-ct">
 <div class="st-cd si" id="stateCard"><div class="st-in"><div class="st-dt i" id="stateDot"></div><div class="st-tx"><div class="lb">Current Mode</div><div class="vl i" id="stateValue">— 等待输入</div></div></div><div style="margin-top:6px"><span class="mode-badge i" id="modeBadge">❯ idle</span></div></div>
-<div class="sec-t">U0001f9e0 状态演进</div>
+<div class="sec-t">🧠 状态演进</div>
 <div class="tl" id="timeline"><div style="font-size:10px;color:var(--t3);padding:6px 0;text-align:center;">开始对话后显示</div></div>
-<div class="sec-t">U0001f50d 识别模式</div>
+<div class="sec-t">🔍 识别模式</div>
 <div id="patternList"><div style="font-size:10px;color:var(--t3);padding:6px 0;text-align:center;">认知模式将在此显示</div></div>
-<div class="sec-t">U0001f4d6 哲学引用</div>
+<div class="sec-t">📖 哲学引用</div>
 <div id="philRefList"><div style="font-size:10px;color:var(--t3);padding:6px 0;text-align:center;">哲学工具将在此显示</div></div>
 <div class="sec-t">✅ 行动清单</div>
 <div id="actionList"><div style="font-size:10px;color:var(--t3);padding:6px 0;text-align:center;">行动项将在此显示</div></div>
@@ -28,7 +28,7 @@
 <div class="main">
 <div class="ch-hdr"><div class="ci"><span class="cd"></span><span class="cn">认知外骨骼系统</span><span class="cm">· deepseek-v4-flash</span></div><div style="display:flex;gap:4px"><button class="cmd-help" onclick="toggleCmdPanel()">/ 命令</button><button class="rst" onclick="resetChat()">⟳</button></div></div>
 <div class="cmd-panel" id="cmdPanel">
-<h4>U0001f9f0 可用命令</h4>
+<h4>🧰 可用命令</h4>
 <div class="cmd-row"><span class="cmd-key">/deep</span><span class="cmd-desc">深度分析模式 — FACTS/PATTERNS/PHILOSOPHY/RISKS/ACTION 结构化输出</span></div>
 <div class="cmd-row"><span class="cmd-key">/quick</span><span class="cmd-desc">快速回答模式 — 直接给答案，不分析</span></div>
 <div class="cmd-row"><span class="cmd-key">/status</span><span class="cmd-desc">显示当前认知状态分析</span></div>
@@ -49,7 +49,7 @@ var renderPhils=function(){if(!phils.length){$("philRefList").innerHTML="...";re
 var renderActs=function(){if(!acts.length){$("actionList").innerHTML="...";return}$("actionList").innerHTML=acts.slice(-5).map(function(a,i){return'<div class="ac-it"><div class="ck '+(a.done?"dn":"")+'" onclick="toggleAct('+i+')">'+(a.done?"\u2713":"")+'</div><div class="at '+(a.done?"dn":"")+'">'+esc(a.text)+'</div></div>'}).join("")};
 var renderRisks=function(){if(!risks.length){$("riskList").innerHTML="...";return}$("riskList").innerHTML=risks.slice(-3).map(function(r){return'<div class="rk-it"><div class="ri">\u26a0\ufe0f</div><div class="rt">'+esc(r.text)+'</div></div>'}).join("")};
 var toggleAct=function(i){acts[i].done=!acts[i].done;renderActs()};
-var renderMsg=function(role,text,parsed,cmdTag){var div=document.createElement("div");div.className="msg "+(role==="user"?"u":"s");var html='<div class="bb">';if(cmdTag)html+='<span class="cmd-tag '+cmdTag+'">/'+cmdTag+'</span>';if(role==="system"&&parsed&&(parsed.facts.length||parsed.patterns.length||parsed.philosophy)){if(parsed.facts.length){html+='<div class="mf"><div class="fl">U0001f4cb FACTS</div>';parsed.facts.forEach(function(f){html+='<div class="fi">'+esc(f)+'</div>'});html+="</div>"}if(parsed.patterns.length){html+='<div class="mp"><div class="pl">U0001f9e9 PATTERNS</div>';parsed.patterns.forEach(function(p){html+='<div class="pi">'+esc(p)+'</div>'});html+="</div>"}if(parsed.philosophy){html+='<div class="mh"><div class="hl">U0001f4d6 PHILOSOPHICAL ANALYSIS</div><div class="ht">'+esc(parsed.philosophy)+"</div></div>"}if(parsed.risks.length){html+='<div class="mr"><div class="rl">\u26a0\ufe0f RISKS</div>';parsed.risks.forEach(function(r){html+='<div class="ri">'+esc(r)+'</div>'});html+="</div>"}if(parsed.action){html+='<div class="ma"><div class="al">U0001f3af PRACTICAL NEXT STEP</div><div class="at">'+esc(parsed.action)+"</div></div>"}}else{html+=esc(text)}html+="</div>";var n=new Date();html+='<div class="mt">'+n.toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})+'</div>';div.innerHTML=html;chatMsg.appendChild(div);chatMsg.scrollTop=chatMsg.scrollHeight};
+var renderMsg=function(role,text,parsed,cmdTag){var div=document.createElement("div");div.className="msg "+(role==="user"?"u":"s");var html='<div class="bb">';if(cmdTag)html+='<span class="cmd-tag '+cmdTag+'">/'+cmdTag+'</span>';if(role==="system"&&parsed&&(parsed.facts.length||parsed.patterns.length||parsed.philosophy)){if(parsed.facts.length){html+='<div class="mf"><div class="fl">📋 FACTS</div>';parsed.facts.forEach(function(f){html+='<div class="fi">'+esc(f)+'</div>'});html+="</div>"}if(parsed.patterns.length){html+='<div class="mp"><div class="pl">🧩 PATTERNS</div>';parsed.patterns.forEach(function(p){html+='<div class="pi">'+esc(p)+'</div>'});html+="</div>"}if(parsed.philosophy){html+='<div class="mh"><div class="hl">📖 PHILOSOPHICAL ANALYSIS</div><div class="ht">'+esc(parsed.philosophy)+"</div></div>"}if(parsed.risks.length){html+='<div class="mr"><div class="rl">\u26a0\ufe0f RISKS</div>';parsed.risks.forEach(function(r){html+='<div class="ri">'+esc(r)+'</div>'});html+="</div>"}if(parsed.action){html+='<div class="ma"><div class="al">🎯 PRACTICAL NEXT STEP</div><div class="at">'+esc(parsed.action)+"</div></div>"}}else{html+=esc(text)}html+="</div>";var n=new Date();html+='<div class="mt">'+n.toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})+'</div>';div.innerHTML=html;chatMsg.appendChild(div);chatMsg.scrollTop=chatMsg.scrollHeight};
 var addThink=function(){var d=document.createElement("div");d.className="msg s";d.id="ti";d.innerHTML='<div class="thk"><div class="thk-dt"><span></span><span></span><span></span></div><span style="font-size:11px;color:var(--t3)">\u8ba4\u77e5\u8c03\u5ea6\u4e2d...</span></div>';chatMsg.appendChild(d);chatMsg.scrollTop=chatMsg.scrollHeight};
 var rmThink=function(){var e=$("ti");if(e)e.remove()};
 var handleKeydown=function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();sendMessage()}};
